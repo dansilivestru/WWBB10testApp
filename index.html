@@ -1,0 +1,51 @@
+<html>
+    <title>
+    </title>
+    <body>
+        <script type="text/javascript">
+            
+        </script>
+        <link rel="stylesheet" href="styles/styles.css" type="text/css" media="screen" charset="utf-8">
+        <img src="http://l.yimg.com/a/i/ww/met/logo/20100909/yahoo_logo_ca.png">
+
+        <div>
+            <a href="xhr.html">xhr proxy tests</a>
+        </div>
+
+        <div data-bb-type="row">
+            <div data-bb-type="label">Date</div>
+            <input id="date" type="date" value="" />
+        </div>
+        <div data-bb-type="row">
+            <div id="btnDate" data-bb-type="button" data-bb-style="stretch" onclick="
+var today = new Date().getFullYear().toString() + '-' + 
+            new Date().getMonth().toString() + '-' + 
+            new Date().getDate().toString();
+            console.log(typeof(today), today);
+            document.getElementById('date').value = today;">Insert Date</div>
+        </div>
+
+        <div id="menu_wrapper">
+            <div id="menu_column1"><a href="session.html">Start Session</a></div>
+            <div id="menu_column2">Recognize &amp; Create</div>
+
+            <div id="menu_column1">Session Diary</div>
+            <div id="menu_column2">Session Reports</div>
+           
+            <div id="menu_column1">Help/FAQ</div>
+            <div id="menu_column2">Tutorials</div>
+
+            <div id="menu_column1">Settings</div>
+            <div id="menu_column2">Community</div>
+
+            <span class="defaulttext">RESULT</span>
+            <ul>
+                <li>Black: default</li>
+                <li><span style="color: red;">Red</span>: 320</li>
+                <li><span style="color: green;">Green</span>: 768</li>
+                <li><span style="color: blue;">Blue</span>: 320 @ 2</li>
+                <li><span style="color: orange;">Orange</span>: 768 @ 2</li>
+            </ul>
+        </div>
+    </body>
+</html>

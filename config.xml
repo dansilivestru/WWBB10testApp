@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2010-2011 Research In Motion Limited.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+  http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:rim="http://www.blackberry.com/ns/widgets" 
+        version="1.0.0.2" id="KitchenSink" xml:lang="en">
+	<name>Test app</name>
+	<description>test</description>
+	<author rim:copyright="2012" email="dsilivestru@rim.com" href="http://www.blackberry.com/developers">Adam Stanley</author>
+	<content src="index.html"/>
+    <access subdomains="true" uri="https://www.google.ca"/>
+    <feature id="blackberry.app"/>
+    <feature id="blackberry.io"/>
+    <feature id="blackberry.ui.contextmenu"/>
+    <feature id="blackberry.device"/>
+    <feature id="blackberry.invoked"/>
+    <rim:invoke-target id="com.domain.subdomain.appname.app">
+        <type>APPLICATION</type>
+        <filter>
+            <action>bb.action.OPEN</action>
+            <action>bb.action.SET</action>
+            <mime-type>text/*</mime-type>
+            <property var="exts" value="txt,css,html,js" />
+        </filter>
+    </rim:invoke-target>
+    <rim:invoke-target id="appname.app">
+        <type>APPLICATION</type>
+        <filter>
+            <action>bb.action.OPEN</action>
+            <mime-type>application/*</mime-type>
+            <mime-type>text/*</mime-type>
+            <mime-type>audio/*</mime-type>
+            <mime-type>image/*</mime-type>
+            <mime-type>message/*</mime-type>
+            <mime-type>video/*</mime-type>
+        </filter>
+        <filter>
+            <action>bb.action.VIEW</action>
+            <mime-type>text/*</mime-type>
+            <property var="uris" value="http://127.0.0.2,https://" />
+     </filter>
+        <filter>
+            <action>bb.action.SET</action>
+            <mime-type>image/*</mime-type>
+            <property var="exts" value="bmp,png,jpg,gif" />
+        </filter>
+    </rim:invoke-target>
+    <rim:permissions>
+        <rim:permit>access_shared</rim:permit>
+        <rim:permit>read_geolocation</rim:permit>
+        <rim:permit>use_camera</rim:permit>
+    </rim:permissions>
+	<license href="http://www.apache.org/licenses/LICENSE-2.0">
+		Licensed under the Apache License, Version 2.0 (the "License");
+		you may not use this file except in compliance with the License.
+		You may obtain a copy of the License at
+			http://www.apache.org/licenses/LICENSE-2.0
+		Unless required by applicable law or agreed to in writing, software
+		distributed under the License is distributed on an "AS IS" BASIS,
+		WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+		See the License for the specific language governing permissions and limitations under the License.
+	</license>
+</widget>
